@@ -1,0 +1,79 @@
+:root {
+  --medium-day: hsl(198, 72%, 81%);
+  --light-day: hsl(186, 59%, 87%);
+  --cloud: hsl(0, 0%, 100%);
+  --sun: hsl(53, 98%, 57%);
+  --rays: hsl(53, 100%, 85%);
+
+  --moon: hsl(48, 100%, 81%);
+  --mare: hsl(39, 73%, 65%);
+  --light-night: hsl(233, 25%, 53%);
+  --medium-night: hsl(242, 35%, 31%);
+  --darkest-night: hsl(212, 71%, 12%);
+}
+
+.toggle-bar {
+  /* border: 5px solid #333333; */
+  border-radius: 51px;
+  height: 100px;
+  padding: 0;
+  position: relative;
+  width: 250px;
+}
+
+.toggle-bar * {
+  position: absolute;
+}
+
+.day,
+.night {
+  border-radius: 46px;
+}
+
+.day {
+  background: linear-gradient(180deg, var(--light-day), var(--medium-day));
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.rays {
+  background-color: var(--rays);
+  border-radius: 50%;
+  height: 70%;
+  left: 15px;
+  top: 15px;
+  width: 30%;
+}
+
+.sun {
+  background-color: var(--sun);
+  border-radius: 50%;
+  height: 85%;
+  left: 6px;
+  top: 5px;
+  width: 85%;
+}
+
+.toggle-bar:active {
+}
+
+/*
+  .cloud {
+    background-color: var(--cloud);
+  }
+  
+  .main {
+    border-radius: 30px;
+    height: 45%;
+    left: 125px;
+    top: 45px;
+    width: 60%;
+  }
+  */
+
+.night {
+  background: linear-gradient(180deg, var(--light-night), var(--medium-night));
+  height: 100%;
+  width: 100%;
+}
