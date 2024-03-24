@@ -12,7 +12,15 @@
   --darkest-night: hsl(212, 71%, 12%);
 }
 
-.toggle-bar {
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  height: 100svh;
+}
+
+.toggle-bar-wrapper {
   /* border: 5px solid #333333; */
   border-radius: 51px;
   height: 100px;
@@ -21,12 +29,11 @@
   width: 250px;
 }
 
-.toggle-bar * {
+.toggle-bar-wrapper * {
   position: absolute;
 }
 
-.day,
-.night {
+#toggle-bar {
   border-radius: 46px;
 }
 
@@ -37,7 +44,7 @@
   z-index: 1;
 }
 
-.rays {
+.toggle {
   background-color: var(--rays);
   border-radius: 50%;
   height: 70%;
