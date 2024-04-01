@@ -38,7 +38,13 @@ main {
 }
 
 .day {
-  background: linear-gradient(180deg, var(--light-day), var(--medium-day));
+  background: linear-gradient(
+    180deg,
+    var(--light-day),
+    var(--medium-day),
+    var(--light-night),
+    var(--medium-night)
+  );
   height: 100%;
   width: 100%;
   z-index: 1;
@@ -80,7 +86,40 @@ main {
   */
 
 .night {
+  animation: day-to-night 0.5s ease-in-out;
   background: linear-gradient(180deg, var(--light-night), var(--medium-night));
   height: 100%;
   width: 100%;
+}
+
+@keyframes day-to-night {
+  0% {
+    background: linear-gradient(180deg, var(--light-day), var(--medium-day));
+  }
+  25% {
+    background: linear-gradient(180deg, var(--medium-day), var(--light-day));
+  }
+  37% {
+    background-color: var(--medium-day);
+  }
+  50% {
+    background: linear-gradient(180deg, var(--medium-night), var(--medium-day));
+  }
+  67% {
+    background-color: var(--medium-night);
+  }
+  75% {
+    background: linear-gradient(
+      180deg,
+      var(--light-night),
+      var(--medium-night)
+    );
+  }
+  100% {
+    background: linear-gradient(
+      180deg,
+      var(--light-night),
+      var(--medium-night)
+    );
+  }
 }
